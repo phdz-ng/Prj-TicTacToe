@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    background-color: #EBE9E1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.Start-Screen {
+    color: #E43D12;
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.first-btns {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+}
+#startBtn, #resetBtn, #new-game {
+    flex: 1;
+    background-color: #E43D12;
+    font-size: 1.5rem;
+    color: #EBE9E1;
+    border: solid #EFB11D;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+#startBtn:active, #resetBtn:active, #new-game:active {
+    background-color: #e43c12a1;
+}
+#startBtn:hover, #resetBtn:hover{
+    background-color: #e43c12d6;
+}
+
+input {
+    border-radius: 15px;
+    font-size: 1.75rem;
+    border: solid #E43D12;
+
+}
+.Game-Screen {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    #Alert-msg {
+        color: #E43D12;
+        font-size: 1.75rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    #score-board {
+        display: flex;
+        gap: 20px;
+        #player1score, #player2score {
+            background-color: #E43D12;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            flex: 1;
+            text-align: center;
+            gap: 10px;
+            padding: 20px;
+
+            #Score-player1-name, #Score-player2-name {
+                color: #EBE9E1;
+                font-size: 2rem;
+            }
+
+            #Score1, #Score2 {
+                color: #EFB11D;
+                font-size: 3rem;
+            }
+            
+            }
+            
+
+        }
+    }
+
+
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columns, 100px each */
+    grid-template-rows: repeat(3, 100px);    /* 3 rows, 100px each */
+    gap: 5px;                                /* spacing between cells */
+    flex: 1; 
+    justify-content: center;
+    
+    .cell {
+        background-color: #E43D12;
+        color: #EBE9E1;
+        border: solid #EFB11D;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7px;
+
+    }
+}
+.cell {
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color:black;
+    cursor: pointer;
+}
